@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: url(imagenes/Backgrownd.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+
+}
+
+.modal img {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+
+}
+
+.close {
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    cursor: pointer;
+}
+
+.banner {
+
+    background-color: pink;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    position: fixed;
+    top: 0;
+    left: 50%; /* Centrar en la mitad del ancho del viewport */
+    transform: translateX(-50%); /* Ajustar para centrar completamente */
+    width: 100%; /* Anchura del banner */
+    max-width: 800px; /* Ancho máximo para evitar que se extienda demasiado */
+    z-index: 1000;
+
+}
+
+.banner h1 {
+    margin: 0;
+    color: black;
+}
+
+.gallery img {
+    max-width: 100%; /* Ajustar tamaño máximo de las imágenes */
+    height: auto;
+    border-radius: 5px; /* Añadir bordes redondeados para un aspecto más elegante */
+}
+
+/* Media query para dispositivos móviles en posición vertical */
+@media only screen and (max-width: 600px) {
+    .gallery img {
+        max-width: 80%; /* Cambiar el tamaño de las imágenes en dispositivos móviles */
+        height: auto;
+        border-radius: 5px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Ajustar el ancho mínimo de las imágenes en dispositivos móviles */
+        gap: 5px; /* Reducir el espacio entre las imágenes */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .banner h1{
+        font-size: small;
+
+    }
+}
+
+.message{
+
+    text-align: center;
+
+
+}
